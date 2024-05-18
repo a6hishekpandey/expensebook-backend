@@ -91,7 +91,10 @@ const validateForm = {
                 /^[+]{1}(?:[0-9\-\\(\\)\\/.]\s?){6,15}[0-9]{1}$/;
 
             if (!phonePattern.test(phone)) {
-                throw new ApiError(400, "Please enter a valid phone number.");
+                throw new ApiError(
+                    400,
+                    "Please enter a valid phone number. Example: +911234567890"
+                );
             }
         }
     },
